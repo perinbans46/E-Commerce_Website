@@ -18,28 +18,28 @@ export async function GET(request: NextRequest) {
     };
 
     // Validate parameters
-    if (params.page < 1) {
+    if (params.page !== undefined && params.page < 1) {
       return NextResponse.json(
         { error: 'Page must be greater than 0' },
         { status: 400 }
       );
     }
 
-    if (params.limit < 1 || params.limit > 100) {
+    if (params.limit !== undefined && (params.limit < 1 || params.limit > 100)) {
       return NextResponse.json(
         { error: 'Limit must be between 1 and 100' },
         { status: 400 }
       );
     }
 
-    if (params.minPrice && params.minPrice < 0) {
+    if (params.minPrice !== undefined && params.minPrice < 0) {
       return NextResponse.json(
         { error: 'Minimum price cannot be negative' },
         { status: 400 }
       );
     }
 
-    if (params.maxPrice && params.maxPrice < 0) {
+    if (params.maxPrice !== undefined && params.maxPrice < 0) {
       return NextResponse.json(
         { error: 'Maximum price cannot be negative' },
         { status: 400 }
