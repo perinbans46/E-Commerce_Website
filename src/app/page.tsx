@@ -54,7 +54,7 @@ function ProductCatalogPage() {
   }, [resetFilters]);
 
   // Handle add to cart
-  const handleAddToCart = useCallback((product) => {
+  const handleAddToCart = useCallback((product: Product) => {
     addToCart(product);
     // You could add a toast notification here
     console.log(`Added ${product.name} to cart`);
