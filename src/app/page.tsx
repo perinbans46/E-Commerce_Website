@@ -187,7 +187,9 @@ export default function Home() {
 }
 
 // SEO metadata
-export const metadata = {
+export { metadata };
+
+const metadata = {
   title: 'Product Catalog - Browse Our Products',
   description: 'Discover amazing products with our advanced filtering, search, and sorting features. Shop electronics, clothing, home goods, and more.',
   keywords: 'product catalog, e-commerce, shopping, products, online store',
