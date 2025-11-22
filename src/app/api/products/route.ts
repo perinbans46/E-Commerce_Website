@@ -57,7 +57,7 @@ export async function GET(request: NextRequest) {
       filteredProducts = filteredProducts.filter(product =>
         product.name.toLowerCase().includes(searchQuery) ||
         product.description.toLowerCase().includes(searchQuery) ||
-        product.tags.some(tag => tag.toLowerCase().includes(searchQuery)) ||
+        product.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery)) ||
         product.brand?.toLowerCase().includes(searchQuery) ||
         product.category.toLowerCase().includes(searchQuery) ||
         product.subcategory?.toLowerCase().includes(searchQuery)
