@@ -1,4 +1,5 @@
-import { Product, Category } from '@/types';
+import { Product } from '@/types/product';
+import { Category } from '@/types/category';
 
 // Mock categories data
 export const mockCategories: Category[] = [
