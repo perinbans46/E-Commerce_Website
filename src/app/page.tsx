@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useCallback } from 'react';
+import { Product } from '@/types/product';
 import { ProductCatalogProvider, useProductCatalog } from '@/contexts/ProductCatalogContext';
 import { useFilters } from '@/hooks/useFilters';
 import { useProducts } from '@/hooks/useProducts';
