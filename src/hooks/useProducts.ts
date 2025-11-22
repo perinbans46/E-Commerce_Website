@@ -101,7 +101,9 @@ export const useProducts = ({
     // Clean old cache entries
     if (cacheRef.current.size > 50) {
       const oldestKey = cacheRef.current.keys().next().value;
-      cacheRef.current.delete(oldestKey);
+      if (oldestKey) {
+        cacheRef.current.delete(oldestKey);
+      }
     }
   };
 
