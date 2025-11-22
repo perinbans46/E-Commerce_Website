@@ -1,3 +1,5 @@
+import { Category } from './category';
+
 export interface Image {
   id: string;
   url: string;
