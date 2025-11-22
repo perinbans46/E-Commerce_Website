@@ -72,8 +72,8 @@ export const ProductFilters = ({
 
   // Handle custom price input
   const handleCustomPriceSubmit = () => {
-    const min = customMinPrice ? Math.max(0, parseInt(customMinPrice, 10)) : 0;
-    const max = customMaxPrice ? Math.max(0, parseInt(customMaxPrice, 10)) : 0;
+    const min = customMinPrice ? Math.max(0, parseInt(String(customMinPrice), 10)) : 0;
+    const max = customMaxPrice ? Math.max(0, parseInt(String(customMaxPrice), 10)) : 0;
 
     // Validate that max >= min
     if (max > 0 && min > max) {
